@@ -17,7 +17,7 @@ const data =
     'jp' :
     {
         'name' : 'Japan',
-        'icon' : 'flap-jp.png'
+        'icon' : 'flag-jp.png'
     },
     'nl' :
     {
@@ -38,8 +38,7 @@ export default class Flag extends React.Component
         const name = data[this.props.code].name;
         const icon = data[this.props.code].icon;
         
-        return
-        (
+        return (
             <span className="flag">
                 <img className="icon" title={name} src={`/img/${icon}`} />
                 {this.props.showName && <span className="name">{name}</span>}

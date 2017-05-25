@@ -1,23 +1,21 @@
 // src/components/IndexPage.js
 
-import React from 'react';
-import AthletePreview from './AtheletePreview';
-import athletes from '../data/athletes';
+import React from "react";
+import AthletePreview from "./AthletePreview";
+import athletes from "../data/athletes";
 
-export default class IndexPage extends React.Components
+export default class IndexPage extends React.Component
 {
-    render()
+	render()
     {
-        return
-        (
-            <div>
-                <div>
+		return (
+            <div className="home">
+                <div className="athletes-selector">
                     {athletes.map( (athleteData) =>
-                    {
-                        <AthletePreview key={athleteData.id} {...athleteData} />
-                    })}
+                        	<AthletePreview key={athleteData.id} {...athleteData} />
+                    )}
                 </div>
             </div>
-        ):
-    }
+        );
+	}
 }

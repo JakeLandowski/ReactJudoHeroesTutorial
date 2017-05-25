@@ -16,17 +16,16 @@ export default class AthletePage extends React.Component
     render()
     {
         const id = this.props.params.id;
-        const athlete = athletes.filter( (athlete) => athlete.id === id[0]);
-        if(!athlete) return <NotFoundPage />;
+        const athlete = athletes.filter( (athlete) => athlete.id === id )[0];
+        if(!athlete) return (<NotFoundPage />);
         
         const headerStyle = { backgroundImage : `url(/img/${athlete.cover})` };
-        return
-        (
+        return (
             <div className="athlete-full">
                 <AthletesMenu athletes={athletes} />
                 <div className="athlete">
                     <header style={headerStyle} />
-                    <div className="picture=container">
+                    <div className="picture-container">
                         <img src={`/img/${athlete.image}`} />
                         <h2 className="name">{athlete.name}</h2>
                     </div>
@@ -40,7 +39,7 @@ export default class AthletePage extends React.Component
                     </section>
                     
                     <section className="medals">
-                        <p>Winner of <strong>{athletes.medals.length}</strong> medals:</p>
+                        <p>Winner of <strong>{athlete.medals.length}</strong> medals:</p>
                         <ul>
                             {athlete.medals.map( (medal, i) => <Medal key={i} {...medal} /> )}
                         </ul>

@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^7.0.1",
     "http-server": "^0.9.0",
     "webpack": "^1.13.3"
   }

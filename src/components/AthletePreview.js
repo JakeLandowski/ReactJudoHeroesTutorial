@@ -7,8 +7,7 @@ export default class AthletePreview extends React.Component
 {
     render()
     {
-        return
-        (
+        return (
             <Link to={`/athlete/${this.props.id}`}>
                 <div className="athlete-preview">
                 
